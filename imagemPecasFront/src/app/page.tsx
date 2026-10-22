@@ -1,9 +1,7 @@
-import Image from "next/image";
+import { PrimeiroComponente } from "../components/PrimeiroComponente";
 
 export default function Home() {
   return (
-    <main>
-      Minha primeira página usando Next.js
-    </main>
+    <PrimeiroComponente/>
   );
 }
