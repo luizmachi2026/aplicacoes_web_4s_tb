@@ -1,15 +1,28 @@
 'use client'
-export function PrimeiroComponente(){
+
+interface PrimeiroComponenteProps {
+    mensagem?: string;
+    mensagemDoBotao?: string;
+}
+
+export const PrimeiroComponente: React.FC<PrimeiroComponenteProps> = 
+(props: PrimeiroComponenteProps) => {
     
     function handleClick(){
-        console.log("Cliquei no boão");
+        console.log(props.mensagemDoBotao);
     }
     
     return(
         <div>
-            Primeiro Componente Turma B
+            { props.mensagem }
 
             <button onClick={handleClick}>Clique aqui</button>
         </div>
     );
+}
+
+export const ArrowFunction = () => {
+    return (
+        <h2>Arrow Function</h2>
+    )
 }
